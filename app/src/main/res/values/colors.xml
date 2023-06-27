@@ -9,7 +9,7 @@
     <color name="white">#FFFFFFFF</color>
 
     // Color primary
-    <color name="colorPrimary">#212b50</color>
+    <color name="colorPrimary">#28334a</color>
     <color name="colorSecondary">#147bee</color>
     <color name="colorPrimaryDark">#212b45</color>
     <color name="backgroundColor">#212b41</color>
