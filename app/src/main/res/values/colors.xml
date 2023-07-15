@@ -10,9 +10,9 @@
 
     // Color primary
     <color name="colorPrimary">#28334a</color>
-    <color name="colorSecondary">#147bee</color>
-    <color name="colorPrimaryDark">#212b45</color>
-    <color name="backgroundColor">#212b41</color>
+    <color name="colorSecondary">#148bee</color>
+    <color name="colorPrimaryDark">#212b40</color>
+    <color name="backgroundColor">#212b40</color>
     <color name="primaryTextColor">#ffffff</color>
 
     // Color secondary
@@ -24,4 +24,6 @@
     <color name="quaternaryTextColo">#b9b9b9</color>
     <color name="cerise">#da0e86</color>
     <color name="bubble_gum_pink">#ff5ba4</color>
+    //......
+
 </resources>

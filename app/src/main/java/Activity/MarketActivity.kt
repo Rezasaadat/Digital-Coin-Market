@@ -93,7 +93,6 @@ class MarketActivity : AppCompatActivity(), MarketAdapter.RecyclerCallback {
             refreshNews()
         }
 
-
     }
 
     private fun getTopCoinFromApi() {
