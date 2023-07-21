@@ -24,7 +24,9 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
+
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -61,8 +63,6 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
 
-    // show chart =>
-    implementation 'com.robinhood.spark:spark:1.2.0'
 
     // swipe refresh =>
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
