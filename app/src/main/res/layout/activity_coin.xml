@@ -34,7 +34,7 @@
 
             <include
                 android:id="@+id/layout_about"
-                layout="@layout/about" />
+                layout="@layout/aboutfffaaa" />
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>

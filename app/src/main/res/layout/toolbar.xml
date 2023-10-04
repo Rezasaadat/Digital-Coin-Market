@@ -7,9 +7,8 @@
     android:layout_height="wrap_content">
 
     <androidx.appcompat.widget.Toolbar
-        app:titleMarginStart="20dp"
         app:title="Market"
-        android:elevation="6dp"
+        android:elevation="4dp"
         android:background="@color/colorPrimary"
         app:titleTextColor="@color/primaryTextColor"
         android:id="@+id/toolbar"

@@ -15,8 +15,7 @@ import com.reza.digitalcoinapp.databinding.RecyclerlistBinding
 class MarketAdapter(
     private val data: ArrayList<CoinInfo.Data>,
     private val recyclerCallback: RecyclerCallback
-) :
-    RecyclerView.Adapter<MarketAdapter.MarketViewHolder>() {
+) : RecyclerView.Adapter<MarketAdapter.MarketViewHolder>() {
 
     lateinit var binding: RecyclerlistBinding
 
@@ -26,11 +25,8 @@ class MarketAdapter(
         fun bindViews(dataCoinInfo: CoinInfo.Data) {
 
             binding.txtCionName.text = dataCoinInfo.coinInfo.fullName
-
             binding.tetPrice.text = dataCoinInfo.dISPLAY.uSD.pRICE
-
             binding.tetMarcetCap.text = dataCoinInfo.dISPLAY.uSD.mKTCAP
-
             val coinBaseChang = dataCoinInfo.rAW.uSD.cHANGEPCT24HOUR
 
             if (coinBaseChang > 0) {
@@ -41,7 +37,7 @@ class MarketAdapter(
                     )
                 )
                 binding.tetCoinbase.text =
-                    dataCoinInfo.dISPLAY.uSD.cHANGEPCT24HOUR.substring(0, 4) + "%"
+                    dataCoinInfo.rAW.uSD.cHANGEPCT24HOUR.toString().substring(0, 4) + "%"
 
             } else if (coinBaseChang < 0) {
                 binding.tetCoinbase.setTextColor(
@@ -50,9 +46,9 @@ class MarketAdapter(
                         R.color.colorLoss
                     )
                 )
-                binding.tetCoinbase.text = dataCoinInfo.dISPLAY.uSD.cHANGEPCT24HOUR.substring(0, 5) + "%"
+                binding.tetCoinbase.text = dataCoinInfo.rAW.uSD.cHANGEPCT24HOUR.toString().substring(0, 5) + "%"
 
-            } else {
+            } else  {
                 binding.tetCoinbase.text = "0.00" + "%"
             }
 
@@ -78,9 +74,7 @@ class MarketAdapter(
 
     override fun onBindViewHolder(holder: MarketViewHolder, position: Int) {
 
-        holder.bindViews(data[position])
-
-
+        holder.bindViews(data[position] )
     }
 
     override fun getItemCount(): Int = data.size

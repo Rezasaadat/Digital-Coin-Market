@@ -35,7 +35,7 @@ class CoinActivity : AppCompatActivity() {
 
         dataThisCoin = fromIntent.getParcelable<CoinInfo.Data>("bundle1")!!
 
-        if( fromIntent.getParcelable<CoinInfo.Data>("bundle2") != null ){
+        if( fromIntent.getParcelable<CoinInfo.Data>("bundle2") != null )  {
 
         dataThisCoinAbout = fromIntent.getParcelable("bundle2")!!
 
@@ -121,12 +121,15 @@ class CoinActivity : AppCompatActivity() {
         }
 
         binding.layoutChart.txtChartPrice.text = dataThisCoin.dISPLAY.uSD.pRICE
-
-
-            binding.layoutChart.txtChartChang2.text = "  " + dataThisCoin.dISPLAY.uSD.cHANGEPCT24HOUR.substring(0, 4) + "%"
-
-
         binding.layoutChart.txtChartChang1.text = "  " + dataThisCoin.dISPLAY.uSD.cHANGE24HOUR
+
+        if (dataThisCoin.coinInfo.fullName == "BUSD") {
+
+            binding.layoutChart.txtChartChang2.text = "0%"
+        }
+        else{
+            binding.layoutChart.txtChartChang2.text = "  " + dataThisCoin.dISPLAY.uSD.cHANGEPCT24HOUR.substring(0, 5) + "%"
+        }
 
         val tagher = dataThisCoin.rAW.uSD.cHANGE24HOUR
         if ( tagher > 0) {
@@ -144,7 +147,7 @@ class CoinActivity : AppCompatActivity() {
                     R.color.colorGain
                 ))
 
-            binding.layoutChart.txtChartUpdown.text = "UP"
+            binding.layoutChart.txtChartUpdown.text = "▲"
 
             binding.layoutChart.sparkView.lineColor = ContextCompat.getColor(
                 binding.root.context ,
@@ -164,7 +167,7 @@ class CoinActivity : AppCompatActivity() {
                     binding.root.context ,
                     R.color.colorLoss
                 ))
-            binding.layoutChart.txtChartUpdown.text = "DOWN"
+            binding.layoutChart.txtChartUpdown.text = "▼"
 
 
             binding.layoutChart.sparkView.lineColor = ContextCompat.getColor(

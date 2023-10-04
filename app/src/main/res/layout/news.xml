@@ -11,13 +11,13 @@
         android:layout_gravity="center_vertical"
         app:tint="@color/white"
         android:id="@+id/img_Item"
-        android:layout_marginStart="15dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         android:layout_marginEnd="10dp"
          android:src="@drawable/watchtopnews"
-        android:layout_width="34dp"
-        android:layout_height="34dp"/>
+        android:layout_width="24dp"
+        android:layout_height="24dp"/>
 
     <TextView
         android:layout_gravity="center_vertical"
@@ -27,7 +27,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         android:layout_marginEnd="10dp"
-        android:text="some random news some random news some random news some random news  "
+        android:text="some random news are here. you can click the -> to see them..    "
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
