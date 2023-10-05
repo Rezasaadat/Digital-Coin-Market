@@ -128,7 +128,7 @@ class CoinActivity : AppCompatActivity() {
             binding.layoutChart.txtChartChang2.text = "0%"
         }
         else{
-            binding.layoutChart.txtChartChang2.text = "  " + dataThisCoin.dISPLAY.uSD.cHANGEPCT24HOUR.substring(0, 5) + "%"
+            binding.layoutChart.txtChartChang2.text = "  " + dataThisCoin.rAW.uSD.cHANGEPCT24HOUR.toString().substring(0, 5) + "%"
         }
 
         val tagher = dataThisCoin.rAW.uSD.cHANGE24HOUR
